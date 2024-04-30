@@ -21,12 +21,12 @@ if (
 	now.getDate() == Sunday.getDate(4, now.getMonth() + 1, now.getFullYear()).getDate()
 ) {
 	// holiday
-	console.log('HOLIDAY');
+	console.log('TODAY IS HOLIDAY WEEKEND');
 	document.body.style.background = '#FF9FAC';
 	container.innerHTML = 'HOLIDAY';
 } else {
 	// not holiday
-	console.log('NOT HOLIDAY');
+	console.log('TODAY IS NOT HOLIDAY WEEKEND');
 	document.body.style.background = '#9FFFAC';
 	container.innerHTML = 'NOT HOLIDAY';
 }
