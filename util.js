@@ -36,5 +36,9 @@ if (
 };
 dateInput.addEventListener('change',dateOnChange);
 const __now__ = new Date();
-dateInput.value = `${__now__.getFullYear()}-${(__now__.getMonth() + 1).toString().length == 1 ? '0' : ''}${__now__.getMonth() + 1}-${__now__.getDate()}`;
+dateInput.value = (
+ `${__now__.getFullYear()}-` +
+ `${(__now__.getMonth() + 1).toString().length == 1 ? '0' : ''}${__now__.getMonth() + 1}-` +
+ `${__now__.getDate().toString().length == 1 ? '0' : ''}${__now__.getDate()}`
+);
 dateOnChange({target:dateInput});
