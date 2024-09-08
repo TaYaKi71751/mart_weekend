@@ -4,17 +4,14 @@ const dateOnChange =	(event) => {
 // console.log(event.target.value);
 const Sunday = {
 	getDate: function (week, month, year) {
-		let timestamp = Date.parse((new Date(`${year}-${`${month}`.length == 1 ? `0${month}` : month}-01`)).toString());
+		let timestamp = Date.parse((new Date(`${year}-${`${month}`.length == 1 ? `0${month}` : month}-01`)).toString()) - 86400000;
 		let date = new Date();
 		for (let i = 0; i < week; i++) {
-			if (date.getDay() == 0){
-				continue;
-			}
 			do {
 				date = new Date(timestamp + 86400000);
 				timestamp = Date.parse(date);
 				if (date.getDay() == NaN) throw Error('');
-			} while (date.getDay() != 0);
+			} while(date.getDay() != 0);
 			if (date.getMonth() + 1 != month) throw new Error('Cannot reach');
 		}
 		return date;
