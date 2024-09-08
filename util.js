@@ -7,6 +7,9 @@ const Sunday = {
 		let timestamp = Date.parse((new Date(`${year}-${`${month}`.length == 1 ? `0${month}` : month}-01`)).toString());
 		let date = new Date();
 		for (let i = 0; i < week; i++) {
+			if (date.getDay() == 0){
+				continue;
+			}
 			do {
 				date = new Date(timestamp + 86400000);
 				timestamp = Date.parse(date);
