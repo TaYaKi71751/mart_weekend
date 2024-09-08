@@ -1,6 +1,5 @@
-try {
 document.title = 'Mart Weekend';
-	const dateInput = document.querySelector('input.input-date');
+const dateInput = document.querySelector('input.input-date');
 const dateOnChange =	(event) => {
 // console.log(event.target.value);
 const Sunday = {
@@ -43,6 +42,3 @@ dateInput.value = (
  `${__now__.getDate().toString().length == 1 ? '0' : ''}${__now__.getDate()}`
 );
 dateOnChange({target:dateInput});
-} catch (e){
-	console.error(e);
-}
