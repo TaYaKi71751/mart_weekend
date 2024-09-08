@@ -1,11 +1,11 @@
-const dateInput = document.querySelector('input.input-date');
+try {
+	const dateInput = document.querySelector('input.input-date');
 const dateOnChange =	(event) => {
-//	console.log(event.target.value);
+console.log(event.target.value);
 const Sunday = {
 	getDate: function (week, month, year) {
-		let timestamp = Date.parse(new Date(`KST ${year}-${month}-${1}`).toString());
+		let timestamp = Date.parse((new Date(`${year}-${`${month}`.length == 1 ? `0${month}` : month}-01`)).toString());
 		let date = new Date();
-		let day = date.getDay();
 		for (let i = 0; i < week; i++) {
 			do {
 				date = new Date(timestamp + 86400000);
@@ -18,10 +18,13 @@ const Sunday = {
 	}
 };
 let now = new Date(`${event.target.value}`);
-const result = document.querySelector('div.result-text')
+console.log(now);
+console.log(now.getMonth());
+console.log(Sunday.getDate(2, now.getMonth() + 1, now.getFullYear()));
+const result = document.querySelector('div.result-text');
 if (
-	now.getDate() == Sunday.getDate(2, now.getMonth() + 1, now.getFullYear()).getDate() ||
-	now.getDate() == Sunday.getDate(4, now.getMonth() + 1, now.getFullYear()).getDate()
+ (now.getDate()) == Sunday.getDate(2, now.getMonth() + 1, now.getFullYear()).getDate() ||
+ (now.getDate()) == Sunday.getDate(4, now.getMonth() + 1, now.getFullYear()).getDate()
 ) {
 	// holiday
 	console.log('TODAY IS HOLIDAY WEEKEND');
@@ -42,3 +45,6 @@ dateInput.value = (
  `${__now__.getDate().toString().length == 1 ? '0' : ''}${__now__.getDate()}`
 );
 dateOnChange({target:dateInput});
+} catch (e){
+	console.error(e);
+}
