@@ -1,7 +1,7 @@
 try {
 	const dateInput = document.querySelector('input.input-date');
 const dateOnChange =	(event) => {
-console.log(event.target.value);
+// console.log(event.target.value);
 const Sunday = {
 	getDate: function (week, month, year) {
 		let timestamp = Date.parse((new Date(`${year}-${`${month}`.length == 1 ? `0${month}` : month}-01`)).toString());
@@ -21,9 +21,6 @@ const Sunday = {
 	}
 };
 let now = new Date(`${event.target.value}`);
-console.log(now);
-console.log(now.getMonth());
-console.log(Sunday.getDate(2, now.getMonth() + 1, now.getFullYear()));
 const result = document.querySelector('div.result-text');
 if (
  (now.getDate()) == Sunday.getDate(2, now.getMonth() + 1, now.getFullYear()).getDate() ||
