@@ -1,4 +1,5 @@
 try {
+document.title = 'Mart Weekend';
 	const dateInput = document.querySelector('input.input-date');
 const dateOnChange =	(event) => {
 // console.log(event.target.value);
