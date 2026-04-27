@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Mart Weekend">
+	<rect width="512" height="512" rx="96" fill="#2f6fed"/>
+	<rect x="112" y="124" width="288" height="288" rx="34" fill="#ffffff"/>
+	<path d="M152 184h208" stroke="#2f6fed" stroke-width="28" stroke-linecap="round"/>
+	<path d="M184 100v64M328 100v64" stroke="#ffffff" stroke-width="32" stroke-linecap="round"/>
+	<circle cx="208" cy="260" r="28" fill="#ff9fac"/>
+	<circle cx="304" cy="260" r="28" fill="#9fffac"/>
+	<path d="M184 340h144" stroke="#2f6fed" stroke-width="28" stroke-linecap="round"/>
+</svg>

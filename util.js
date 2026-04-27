@@ -1,4 +1,12 @@
 document.title = 'Mart Weekend';
+
+if ('serviceWorker' in navigator) {
+	window.addEventListener('load', () => {
+		navigator.serviceWorker.register('./sw.js')
+			.catch((error) => console.error('Service worker registration failed:', error));
+	});
+}
+
 const dateInput = document.querySelector('input.input-date');
 const dateOnChange =	(event) => {
 // console.log(event.target.value);

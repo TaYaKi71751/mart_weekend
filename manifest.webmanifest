@@ -1,0 +1,18 @@
+{
+	"name": "Mart Weekend",
+	"short_name": "Mart Weekend",
+	"description": "Check whether a selected date is a mart holiday weekend.",
+	"start_url": "./",
+	"scope": "./",
+	"display": "standalone",
+	"background_color": "#ffffff",
+	"theme_color": "#2f6fed",
+	"icons": [
+		{
+			"src": "./icons/icon.svg",
+			"sizes": "any",
+			"type": "image/svg+xml",
+			"purpose": "any maskable"
+		}
+	]
+}
